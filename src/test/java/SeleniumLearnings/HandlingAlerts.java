@@ -2,8 +2,6 @@ package SeleniumLearnings;
 
 import java.time.Duration;
 
-import javax.print.DocFlavor.URL;
-
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
