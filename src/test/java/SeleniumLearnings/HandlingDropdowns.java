@@ -80,7 +80,23 @@ public class HandlingDropdowns {
 			System.out.println(option.getText());
 		}
 		
-		Thread.sleep(3000);
+		
+		// Auto Suggested dropdown
+		
+		driver.get("https://www.google.com");
+		driver.findElement(By.xpath("//textarea[@title=\"Search\"]")).sendKeys("selenium");
+		
+		//capture all options and select the required option
+		
+		List<WebElement> options4= driver.findElements(By.xpath("//li[@data-attrid=\"AutocompletePrediction\" and contains(@data-entityname,\"selenium\")]"));
+		for(WebElement option:options4) {
+			if(option.getAttribute("data-entityname").equalsIgnoreCase("Selenium")) {
+				option.click();
+				break;
+			}
+		}
+		
+		Thread.sleep(5000);
 		driver.quit();
 	}
 

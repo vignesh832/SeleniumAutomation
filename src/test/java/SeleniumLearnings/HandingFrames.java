@@ -1,7 +1,6 @@
 package SeleniumLearnings;
 
 import java.time.Duration;
-import java.time.temporal.TemporalUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
