@@ -39,8 +39,9 @@ public class HandlingDatePickerCalender {
 		
 		//using calender
 		int date = 8;
-		int year = 2020;
+		int year = 2027;
 		String month = "March";
+		driver.findElement(By.xpath("//input[@id=\"datepicker\"]")).click();
 		datepicker(driver, year, month, date );
 		
 		Thread.sleep(3000);
@@ -50,9 +51,6 @@ public class HandlingDatePickerCalender {
 	
 	//reusable method
 	public static void datepicker(WebDriver driver,int year,String month,int date ) {
-		driver.findElement(By.xpath("//input[@id=\"datepicker\"]")).click();
-		
-		System.out.println(Integer.parseInt(driver.findElement(By.xpath("//span[@class=\"ui-datepicker-year\"]")).getText()));
 		//year iteration
 		while(year != Integer.parseInt(driver.findElement(By.xpath("//span[@class=\"ui-datepicker-year\"]")).getText())) {
 			if(year > Integer.parseInt(driver.findElement(By.xpath("//span[@class=\"ui-datepicker-year\"]")).getText())) {
