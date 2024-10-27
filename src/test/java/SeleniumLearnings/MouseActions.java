@@ -3,6 +3,7 @@ package SeleniumLearnings;
 import java.time.Duration;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Point;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -68,6 +69,22 @@ public class MouseActions {
 		actions.scrollToElement(element).perform();
 		Thread.sleep(3000);
 		actions.scrollByAmount(0,-300).perform();
+		
+		
+		// slider handling using x and y axis position
+		
+		driver.get("https://www.jqueryscript.net/demo/Price-Range-Slider-jQuery-UI/");
+		
+		//pointer a
+		element  = driver.findElement(By.xpath("//div[@id=\"slider-range\"]/span[1]"));
+		actions.dragAndDropBy(element, 100, 0).perform();
+		//pointer b
+		element= driver.findElement(By.xpath("//div[@id=\"slider-range\"]/span[2]"));
+		actions.clickAndHold(element).moveByOffset(-100, 0).release().perform();
+		
+		int xposition1 = element.getLocation().getX();
+		int yposition1 = element.getLocation().getY();
+		actions.clickAndHold(element).moveToLocation(xposition1-100,yposition1).perform();
 		
 		Thread.sleep(5000);
 		
