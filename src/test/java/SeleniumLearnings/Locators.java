@@ -44,6 +44,9 @@ public class Locators {
 		 * tag class				tag.classname
 		 * tag attribute			tag[attribute='attributevalue']
 		 * tag class attribute		tag.classname[attribute='attributevalue']
+		 * 
+		 * for chained css selector use ( tag > tag attribute > tag class attribute > tag class)
+		 * ex: a > span[type='text'] > a.link[type='link'] > a.link
 		 */
 		//<input id="phone"/>
 		driver.findElement(By.cssSelector("input#phone"));
@@ -127,9 +130,7 @@ public class Locators {
 		 * 	//input[@id="phone"]/AxisName::tagname or //input[@id="phone"]/AxisName::*
 		 */
 		
-		
 		driver.findElement(By.xpath(""));
-		
 		
 		Thread.sleep(1000);
 		driver.quit();
