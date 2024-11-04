@@ -1,4 +1,4 @@
-package DataDrivenTestingUsingExcel;
+package datadrivenTesting;
 
 import java.io.IOException;
 import java.util.Arrays;

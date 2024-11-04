@@ -1,4 +1,4 @@
-package SeleniumLearnings;
+package seleniumlearnings;
 
 import java.time.Duration;
 import java.util.function.Function;

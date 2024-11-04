@@ -1,4 +1,4 @@
-package DataDrivenTestingUsingExcel;
+package datadrivenTesting;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -25,8 +25,8 @@ public class ExcelUtils {
 	private static FileOutputStream outputStream;
 	private static XSSFWorkbook workbook;
 	private static XSSFSheet sheet;
-	private static XSSFRow row;
-	private static XSSFCell cell;
+	//private static XSSFRow row;
+	//private static XSSFCell cell;
 	
 	public static String[][] readingData(String fileName, String sheetName) throws IOException {
 		inputStream= new FileInputStream(fileName);

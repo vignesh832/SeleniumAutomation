@@ -1,4 +1,4 @@
-package SeleniumLearnings;
+package seleniumlearnings;
 
 import java.io.IOException;
 import java.net.HttpURLConnection;

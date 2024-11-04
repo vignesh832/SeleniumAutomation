@@ -1,4 +1,4 @@
-package SeleniumLearnings;
+package seleniumlearnings;
 
 import java.net.MalformedURLException;
 import java.net.URL;
